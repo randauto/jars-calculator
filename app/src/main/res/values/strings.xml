@@ -2,4 +2,5 @@
     <string name="app_name">Jars-Calculator</string>
     <string name="action_about">About</string>
     <string name="action_setting">Setting</string>
+    <string name="txt_qa">How money do you have in this month?</string>
 </resources>

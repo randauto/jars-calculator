@@ -2,19 +2,58 @@ package com.bip.jars
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import com.bip.jars.model.JarsModel
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.content_main.*
 
 class MainActivity : AppCompatActivity() {
+    val TAG: String = "MainActivity"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
+        editText.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(s: Editable?) {
 
+            }
+
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                calcuLator()
+            }
+
+        })
+
+
+    }
+
+    private fun calcuLator() {
+
+        try {
+            val currentMoney: Double? = editText.numericValue
+
+            val jarsModel = JarsModel(currentMoney = currentMoney)
+            etNec.setText(jarsModel.getNec().toString())
+            etEdu.setText(jarsModel.getEdu().toString())
+            etFfa.setText(jarsModel.getFfa().toString())
+            etGive.setText(jarsModel.getGive().toString())
+            etLts.setText(jarsModel.getLts().toString())
+            etPlay.setText(jarsModel.getPlay().toString())
+
+        } catch (ex: Exception) {
+            Log.d(TAG, ex.message)
+        }
 
     }
 

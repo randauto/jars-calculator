@@ -24,6 +24,8 @@ class AboutActivity : AppCompatActivity() {
         webView.webChromeClient = MyWebChormeClient(this)
         val webSetting: WebSettings = webView.settings
         webSetting.useWideViewPort = true
+        webSetting.useWideViewPort = true
+        webSetting.builtInZoomControls = true
 
     }
 

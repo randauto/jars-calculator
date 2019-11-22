@@ -11,15 +11,15 @@
 
     <TextView
         android:id="@+id/tv_qa"
-        android:layout_width="0dp"
         style="@style/fontDisplayRegular"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:textAlignment="center"
-        android:gravity="center"
         android:layout_marginEnd="16dp"
-        android:text="How money do you have\nin this month?"
+        android:gravity="center"
+        android:text="@string/txt_qa"
+        android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.466"
@@ -48,14 +48,14 @@
         app:layout_constraintStart_toStartOf="@+id/tvNEC"
         app:layout_constraintTop_toTopOf="@+id/etPlay" />
 
-    <EditText
+    <com.yigitserin.currencyedittext.CurrencyEditText
         android:id="@+id/etNec"
+        style="@style/fontDisplayRegular"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="16dp"
-        style="@style/fontDisplayRegular"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:enabled="false"
@@ -74,12 +74,12 @@
 
     <com.yigitserin.currencyedittext.CurrencyEditText
         android:id="@+id/editText"
+        style="@style/fontDisplayRegular"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="8dp"
-        style="@style/fontDisplayRegular"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
         android:ems="10"
@@ -132,19 +132,20 @@
         app:layout_constraintStart_toStartOf="@+id/tvLTS"
         app:layout_constraintTop_toTopOf="@+id/etGive" />
 
-    <EditText
+    <com.yigitserin.currencyedittext.CurrencyEditText
         android:id="@+id/etPlay"
         style="@style/fontDisplayRegular"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:ems="10"
+        android:enabled="false"
         android:inputType="numberSigned"
         app:layout_constraintEnd_toEndOf="@+id/etNec"
         app:layout_constraintStart_toStartOf="@+id/etNec"
         app:layout_constraintTop_toBottomOf="@+id/etNec" />
 
-    <EditText
+    <com.yigitserin.currencyedittext.CurrencyEditText
         android:id="@+id/etFfa"
         style="@style/fontDisplayRegular"
         android:layout_width="0dp"
@@ -158,7 +159,7 @@
         app:layout_constraintStart_toStartOf="@+id/etPlay"
         app:layout_constraintTop_toBottomOf="@+id/etPlay" />
 
-    <EditText
+    <com.yigitserin.currencyedittext.CurrencyEditText
         android:id="@+id/etEdu"
         style="@style/fontDisplayRegular"
         android:layout_width="0dp"
@@ -171,7 +172,7 @@
         app:layout_constraintStart_toStartOf="@+id/etFfa"
         app:layout_constraintTop_toBottomOf="@+id/etFfa" />
 
-    <EditText
+    <com.yigitserin.currencyedittext.CurrencyEditText
         android:id="@+id/etLts"
         style="@style/fontDisplayRegular"
         android:layout_width="0dp"
@@ -184,7 +185,7 @@
         app:layout_constraintStart_toStartOf="@+id/etEdu"
         app:layout_constraintTop_toBottomOf="@+id/etEdu" />
 
-    <EditText
+    <com.yigitserin.currencyedittext.CurrencyEditText
         android:id="@+id/etGive"
         style="@style/fontDisplayRegular"
         android:layout_width="0dp"
