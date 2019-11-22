@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
@@ -52,7 +51,6 @@ class MainActivity : AppCompatActivity() {
             etPlay.setText(jarsModel.getPlay().toString())
 
         } catch (ex: Exception) {
-            Log.d(TAG, ex.message)
         }
 
     }
