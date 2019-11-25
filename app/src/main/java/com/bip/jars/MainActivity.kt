@@ -51,6 +51,12 @@ class MainActivity : AppCompatActivity() {
             etPlay.setText(jarsModel.getPlay().toString())
 
         } catch (ex: Exception) {
+            etNec.setText("0")
+            etEdu.setText("0")
+            etFfa.setText("0")
+            etGive.setText("0")
+            etLts.setText("0")
+            etPlay.setText("0")
         }
 
     }

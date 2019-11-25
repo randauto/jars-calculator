@@ -1,5 +1,7 @@
 package com.bip.jars.model
 
+import kotlin.math.roundToInt
+
 data class JarsModel(private var currentMoney: Double?) {
     private var nec: Int = 55
 
@@ -13,27 +15,27 @@ data class JarsModel(private var currentMoney: Double?) {
 
     private var giv: Int = 5
 
-    fun getNec(): Double {
-        return currentMoney?.div(100)!! * nec
+    fun getNec(): Int {
+        return ((currentMoney?.div(100)!! * nec).roundToInt())
     }
 
-    fun getPlay(): Double {
-        return currentMoney?.div(100)!! * play
+    fun getPlay(): Int {
+        return (currentMoney?.div(100)!! * play).roundToInt()
     }
 
-    fun getFfa(): Double {
-        return currentMoney?.div(100)!! * ffa
+    fun getFfa(): Int {
+        return (currentMoney?.div(100)!! * ffa).roundToInt()
     }
 
-    fun getLts(): Double {
-        return currentMoney?.div(100)!! * lts
+    fun getLts(): Int {
+        return (currentMoney?.div(100)!! * lts).roundToInt()
     }
 
-    fun getEdu(): Double {
-        return currentMoney?.div(100)!! * edu
+    fun getEdu(): Int {
+        return (currentMoney?.div(100)!! * edu).roundToInt()
     }
 
-    fun getGive(): Double {
-        return currentMoney?.div(100)!! * giv
+    fun getGive(): Int {
+        return (currentMoney?.div(100)!! * giv).roundToInt()
     }
 }
